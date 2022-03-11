@@ -1,6 +1,6 @@
 import React from 'react';
-import Logo from '../molecules/Logo';
-import NavHeader from '../molecules/NavHeader';
+import Logo from '../molecules/Logo.jsx';
+import NavHeader from '../molecules/NavHeader.jsx';
 
 const Header = () => {
     return (
