@@ -1,8 +1,13 @@
 import React from 'react';
+import Logo from '../molecules/Logo';
+import NavHeader from '../molecules/NavHeader';
 
 const Header = () => {
     return (
-        <header id="header">fghj</header>
+        <header id="header">
+            <Logo></Logo>
+            <NavHeader></NavHeader>
+        </header>
     );
 };
 
