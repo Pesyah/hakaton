@@ -1,0 +1,12 @@
+.btn-hover1{
+    transition: 0.7s;
+}
+.btn-hover1:hover{
+    background: #3C3C3B;
+}
+@font-face{
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    src: url(..//src/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}

@@ -1,0 +1,37 @@
+#header{
+    text-align: left;
+    width: 100%;
+    position: fixed;
+    height: 99.49px;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    max-width: 300px;
+    display: inline-block;
+    padding: 0px;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99.49px;
+    padding: 0px;
+}
+.header-btn{
+    height: 100%;
+    border: 0px;
+    background: #E4003A;
+    padding: 0px;
+}
+.header-btn a{
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+}
+.header-btn a:hover{
+    text-decoration: none;
+}

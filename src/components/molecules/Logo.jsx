@@ -3,7 +3,7 @@ import LogoImg from '../atoms/LogoImg';
 
 const Logo = () => {
     return (
-        <div className="logo">
+        <div className="col-xs-3 logo">
             <LogoImg></LogoImg>
         </div>
     );
