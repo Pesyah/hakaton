@@ -1,0 +1,59 @@
+.reg-shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 79.59px;
+}
+.reg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    width: 30%;
+    border: 2px solid #E4003A;
+    border-radius: 8px;
+    padding: 40px;
+    padding-top: 20px;
+}
+.reg-zag{
+    text-align: center;
+    font-size: 30px;
+    font-family: Montserrat-ExtraBold;
+    text-transform: uppercase;
+    color: #E4003A;
+    position: relative;
+}
+.reg-zag:after{
+    content: '';
+    display: block;
+    background: #E4003A;
+    width: 300px;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.reg-content{
+    margin-top: 25px;
+}
+.reg-btn{
+    background: transparent;
+    font-size: 21px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    border: 3px solid #E4003A;
+    color: #E4003A;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    padding: 6px 60px;
+    transition: 0.5s;
+}
+.reg-btn:hover{
+    background: #E4003A;
+    color: white;
+}
+.reg-btn-block{
+    text-align: center;
+}

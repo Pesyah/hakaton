@@ -11,13 +11,6 @@ import Footer from './components/organisms/Footer';
 import Header from './components/organisms/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainPage from './components/pages/MainPage';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
-import Registration from './components/Registration/Registration';
-import MainPage from './components/Pages/MainPage.jsx';
 
 function App() {
   return (

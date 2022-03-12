@@ -29,6 +29,17 @@
     background: #E4003A;
     padding: 0px;
     color: white;
+    text-decoration: none;
+}
+.header-btn a{
+    text-decoration: none;
+}
+.header-btn:hover a{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
 }
 .header-btn a{
     color: white;
@@ -37,12 +48,21 @@
     text-transform: uppercase;
     font-family: 'Montserrat';
 }
-.header-btn a:hover{
-    text-decoration: none;
-}
 .nav-other{
     padding: 0px;
     height: 100%;
     display: flex;
     justify-content: end;
+}
+.account-btn div a{
+    height: 79.59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-btn div a{
+    height: 79.59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

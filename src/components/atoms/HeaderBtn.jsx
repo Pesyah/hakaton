@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 const HeaderBtn = (props) => {
     return (
         <button className="col-xs-3 header-btn btn-hover1">
-            <Link to="/">О проекте</Link>
+            <div>
+                <Link to="/">О проекте</Link>
+                </div>
         </button>
     );
 };
