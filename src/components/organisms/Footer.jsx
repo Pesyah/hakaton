@@ -1,5 +1,6 @@
 import React from 'react';
 import LogoImg from '../atoms/LogoImg';
+import FeedBackForm from '../molecules/FeedbackForm';
 import './Footer.css'
 
 const Footer = (props) => {
@@ -8,19 +9,19 @@ const Footer = (props) => {
             <div className="container">
                 <div className="row">
                     <div className="col-xs-12">
-                        <div className="col-xs-6 footer-catalogs">
+                        <div className="col-xs-5 footer-catalogs">
                             <LogoImg/>
-                            <ul className='col-xs-7'>
+                            <br/><ul className='col-xs-7'>
                                 <li><a href={props.cursesHref}></a>{props.cursesText}</li><br/>
                                 <li><a href={props.aboutProjectHref}></a>{props.aboutProjectText}</li><br/>
                                 <li><a href={props.newsHref}></a>{props.newsText}</li>
                             </ul>
                         </div>
-                        <div className="col-xs-6">
-                            
+                        <div className="col-xs-7 footer-form-bl">
+                            <h2 className="footer-form-h2">Свяжитесь с нами!</h2>
+                            <FeedBackForm/>
                         </div>
                     </div>
-                    
                 </div>
             </div>
             <div className="footer-2">

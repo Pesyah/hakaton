@@ -10,7 +10,6 @@
     margin: 0px;
 }
 .footer-catalogs{
-    border-right: 2px solid #CFD2D3;
     padding: 0px;
     height: 79.59px;
     display: flex;
@@ -52,3 +51,57 @@
     margin: 0px;
     display: inline-block;
 }
+#feedback-form-name{
+    width: 45%;
+    margin-right: 2.5%;
+}
+#feedback-form-phone{
+    width: 45%;
+    margin-left: 2.5%;
+}
+.feedback-form{
+    text-align: center;
+}
+#feedback-form-mail{
+    width: 95%;
+}
+#feedback-form-msg{
+    width: 95%;
+}
+.feedback-form-inp{
+    background: transparent;
+    border: 2px solid #FAB526;
+    font-family: 'Montserrat';
+    padding: 9px 21px;
+    font-size: 15px;
+}
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+#feedback-form-mail{
+    margin: 16px 0px;
+}
+#feedback-form-btn{
+    color: #FAB526;
+    margin-top: 16px;
+    transition: 0.5s;
+    padding: 10px 40px;
+}
+#feedback-form-btn:hover{
+    color: #3C3C3B;
+    background: #FAB526;
+}
+.footer-form-bl{
+    border-left: 2px solid #CFD2D3;
+}
+.footer-form-h2{
+    margin: 0px;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    color: #FAB526;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+}
+input::-webkit-input-placeholder { color: #FAB526; }
