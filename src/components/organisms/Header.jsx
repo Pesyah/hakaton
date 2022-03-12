@@ -4,7 +4,7 @@ import Logo from '../molecules/Logo.jsx';
 import NavHeader from '../molecules/NavHeader.jsx';
 import Account from '../molecules/Account';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className="col-xs-12" id="header">
             <Logo/>

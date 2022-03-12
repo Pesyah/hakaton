@@ -11,16 +11,39 @@ import Footer from './components/organisms/Footer';
 import Header from './components/organisms/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainPage from './components/pages/MainPage';
+import Login from './components/pages/Login';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { auth } from './actions/user';
 
 function App() {
+  const isAuth = useSelector(state => state.user.isAuth)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    if (localStorage.getItem('token') != null) {
+      dispatch(auth())
+    }
+  }, [])
+  
   return (
     <Router>
       <div className="App">
       <Header/>
         <Routes>
-          <Route path="/Registration" element={<Registration/>}>
-          </Route>
+          {( () => {
+            if (!isAuth) {
+              return <>
+              <Route path="/Registration" element={<Registration/>}>
+              </Route>
+              <Route path="/login" element={<Login/>}>
+              </Route>
+              </>
+            }
+          })()}
+          
           <Route path="/" element={<MainPage/>}>
+          </Route>
+          <Route path="/admin" element={<div>Привет мир</div>}>
           </Route>
         </Routes>
         <Footer cursesHref='' cursesText='Курсы' aboutProjectHref='/' aboutProjectText='О проекте' newsHref='' newsText='Новости'/>
