@@ -3,6 +3,7 @@ import './MainPage.css'
 import MainCarousel from '../organisms/MainCarousel';
 import MainBlock from '../organisms/MainBlock';
 import Curses from '../organisms/Curses';
+import Footer from '../organisms/Footer';
 
 const MainPage = () => {
     return (
