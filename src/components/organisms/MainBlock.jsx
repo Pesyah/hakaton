@@ -7,7 +7,7 @@ const MainBlock = () => {
             <div className="main-shadow-block">
                 <div className="main-zag-bl">
                     <h2 className="main-zag">Образовательный<br/> проект<br/>INOSTUDIO</h2>
-                    <button id="registration-btn">Регистрация</button>
+                    <button id="registration-btn">О проекте</button>
                 </div>
             </div>
         </div>

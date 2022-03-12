@@ -10,3 +10,9 @@
     font-weight: 400;
     src: url(..//src/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
+@font-face{
+    font-family: "Montserrat-ExtraBold";
+    font-style: normal;
+    font-weight: bold;
+    src: url(..//src/fonts/Montserrat/static/Montserrat-ExtraBold.ttf);
+}
