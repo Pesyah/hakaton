@@ -11,15 +11,27 @@ import Footer from './components/organisms/Footer';
 import Header from './components/organisms/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainPage from './components/pages/MainPage';
+import Login from './components/pages/Login';
+import { useSelector } from 'react-redux';
 
 function App() {
+  const isAuth = useSelector(state => state.user.isAuth)
   return (
     <Router>
       <div className="App">
       <Header/>
         <Routes>
-          <Route path="/Registration" element={<Registration/>}>
-          </Route>
+          {( () => {
+            if (!isAuth) {
+              return <>
+              <Route path="/Registration" element={<Registration/>}>
+              </Route>
+              <Route path="/login" element={<Login/>}>
+              </Route>
+              </>
+            }
+          })()}
+          
           <Route path="/" element={<MainPage/>}>
           </Route>
         </Routes>
