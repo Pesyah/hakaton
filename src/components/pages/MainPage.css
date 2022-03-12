@@ -1,0 +1,69 @@
+#curses{
+    margin-top: 99.49px;
+}
+.main-carousel{
+    height: 450px;
+}
+.main-carosel-inner{
+    height: 100%;
+}
+.slide{
+    height: 100%;
+}
+.carousel-inner{
+    height: 100%;
+}
+.carousel-item{
+    height: 100%;
+    width: 100%;
+}
+.main-carousel-block{
+    height: 450px;
+}
+.main-carousel-content h3{
+    margin: 0px;
+}
+#main-page{
+    margin-top: 79.59px;
+}
+#main-block{
+    height: 550px;
+    background: url(main.png);
+    background-size: cover;
+    background-position-y: 37%;
+    background-repeat: no-repeat;
+}
+.main-shadow-block{
+    width: 100%;
+    height: 100%;
+    background: #0000007a;
+    position: relative;
+}
+.main-zag{
+    margin: 0px;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 60px;
+    letter-spacing: 1px;
+    line-height: 65px;
+}
+.main-zag-bl{
+    position: absolute;
+    left: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#registration-btn{
+    color: white;
+    font-family: 'Montserrat';
+    background: #00A783;
+    border: 0px;
+    border-radius: 6px;
+    padding: 10px 32px;
+    font-size: 22px;
+    margin-top: 24px;
+    transition: 0.5s;
+}
+#registration-btn:hover{
+    background: #00A1DF;
+}
