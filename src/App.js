@@ -15,21 +15,14 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <Header></Header>
-      <MainPage>
+      <Header/>
         <Routes>
-
-          <Route path="/Registration">
-            <Registration />
+          <Route path="/Registration" element={<Registration/>}>
           </Route>
-
-          <Route path="/">
-            <>123</>
+          <Route path="/" element={<MainPage/>}>
           </Route>
-
         </Routes>
-      </MainPage>
-      <Footer></Footer>
+        <Footer/>
       </div>
     </Router>
   );  
