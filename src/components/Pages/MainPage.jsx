@@ -1,13 +1,13 @@
 import React from 'react';
-import Footer from '../organisms/Footer';
-import Header from '../organisms/Header';
+import './MainPage.css'
+import MainCarousel from '../organisms/MainCarousel';
+import MainBlock from '../organisms/MainBlock';
 
 const MainPage = () => {
     return (
-        <div>
-            <Header></Header>
-            <Footer></Footer>
-        </div>
+        <section id="main-page">
+            <MainBlock/>
+        </section>
     );
 };
 
