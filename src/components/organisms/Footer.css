@@ -1,0 +1,54 @@
+#footer{
+    padding: 35px 0px;
+    padding-bottom: 0px;
+    background: #3C3C3B;
+}
+#footer .container .row .col-xs-12{
+    padding: 0px;
+}
+.footer-catalogs{
+    margin: 0px;
+}
+.footer-catalogs{
+    border-right: 2px solid #CFD2D3;
+    padding: 0px;
+    height: 79.59px;
+    display: flex;
+    align-items: center;
+}
+.footer-catalogs ul{
+    margin: 0px;
+    padding: 0px;
+    margin-left: 16px;
+}
+.footer-catalogs ul li{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    display: inline-block;
+}
+.footer-catalogs .logo{
+    float: left;
+}
+.footer-2{
+    background: #E4003A;
+    margin-top: 35px;
+    padding: 20px 0px;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 15px;
+}
+.footer-2 .container{
+    padding: 0px;
+}
+.footer-2-text{
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+}

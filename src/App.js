@@ -35,7 +35,7 @@ function App() {
           <Route path="/" element={<MainPage/>}>
           </Route>
         </Routes>
-        <Footer/>
+        <Footer cursesHref='' cursesText='Курсы' aboutProjectHref='/' aboutProjectText='О проекте' newsHref='' newsText='Новости'/>
       </div>
     </Router>
   );  
