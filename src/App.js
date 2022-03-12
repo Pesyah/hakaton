@@ -1,23 +1,31 @@
 import './App.css';
 import './Style.css'
 import './bootstrap.min.css'
-import Footer from './components/organisms/Footer';
-import Header from './components/organisms/Header';
+import MainPage from './components/Pages/MainPage.jsx';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Registration from './components/Registration/Registration';
 
 function App() {
-  fetch('http://localhost:5000/sayHello')
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  });
   return (
-    <div className="App">
-      <Header></Header>
-      <Footer></Footer>
-    </div>
-  );
+    <Router>
+      <div className="App">
+        <MainPage>
+        <Routes>
+          <Route path="/Registration">
+            <Registration />
+          </Route>
+          <Route path="/">
+            <>123</>
+          </Route>
+        </Routes>
+        </MainPage>
+      </div>
+    </Router>
+  );  
 };
 
 export default App;

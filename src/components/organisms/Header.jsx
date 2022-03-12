@@ -8,8 +8,10 @@ const Header = () => {
     return (
         <header id="header">
             <Logo/>
-            <NavHeader/>
-            <Account text='Войти' src='#'/>
+            <NavHeader>
+            </NavHeader>
+            <Account>
+            </Account>
         </header>
     );
 };
