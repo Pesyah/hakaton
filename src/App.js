@@ -6,7 +6,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Registration from './components/Registration/Registration';
+import Registration from './components/Pages/Registration';
 import Footer from './components/organisms/Footer';
 import Header from './components/organisms/Header';
 import MainPage from './components/Pages/MainPage.jsx';
