@@ -4,7 +4,7 @@
     background: #3C3C3B;
 }
 #footer .container .row .col-xs-12{
-    padding: 0px;
+    margin: 0px;
 }
 .footer-catalogs{
     margin: 0px;
@@ -12,8 +12,11 @@
 .footer-catalogs{
     padding: 0px;
     height: 79.59px;
+}
+.footer-catalogs-top{
     display: flex;
     align-items: center;
+    margin-bottom: 40px;
 }
 .footer-catalogs ul{
     margin: 0px;
@@ -32,6 +35,24 @@
     cursor: pointer;
     display: inline-block;
 }
+.footer-catalogs-top ul{
+    margin: 0px;
+    padding: 0px;
+    margin-left: 16px;
+}
+.footer-catalogs-top ul li{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    display: inline-block;
+}
+
 .footer-catalogs .logo{
     float: left;
 }
@@ -105,3 +126,36 @@
     font-family: 'Montserrat';
 }
 input::-webkit-input-placeholder { color: #FAB526; }
+.footer-links li a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 100;
+}
+.footer-links-zag{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+.footer-catalogs .footer-links{
+    margin-left: 0px;
+}
+.footer-links{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.footer-links .col-xs-6{
+    margin-left: 0;
+    padding-left: 15px;
+}
+.border-right{
+    border-right: 2px solid #CFD2D3;
+}
+.footer-links-right-col{
+    padding-left: 15px;
+}
