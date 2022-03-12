@@ -1,6 +1,12 @@
 import './App.css';
 import './Style.css'
 import './bootstrap.min.css'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Registration from './components/Registration/Registration';
 import Footer from './components/organisms/Footer';
 import Header from './components/organisms/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,15 +17,9 @@ import {
   Route,
 } from "react-router-dom";
 import Registration from './components/Registration/Registration';
+import MainPage from './components/Pages/MainPage.jsx';
 
 function App() {
-  fetch('http://localhost:5000/sayHello')
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  });
   return (
     <Router>
       <div className="App">
@@ -33,7 +33,7 @@ function App() {
         <Footer/>
       </div>
     </Router>
-  );
+  );  
 };
 export default App;
 
