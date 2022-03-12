@@ -2,12 +2,15 @@
     text-align: left;
     width: 100%;
     position: fixed;
-    height: 99.49px;
+    height: 79.59px;
+    top: 0;
     display: flex;
     align-items: center;
+    z-index: 3;
+    padding: 0px;
 }
 .logo{
-    max-width: 300px;
+    max-width: 240px;
     display: inline-block;
     padding: 0px;
 }
@@ -16,8 +19,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 99.49px;
+    height: 79.59px;
     padding: 0px;
+    background: #E4003A;
 }
 .header-btn{
     height: 100%;
@@ -27,11 +31,17 @@
 }
 .header-btn a{
     color: white;
-    font-size: 21px;
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     font-family: 'Montserrat';
 }
 .header-btn a:hover{
     text-decoration: none;
+}
+.nav-other{
+    padding: 0px;
+    height: 100%;
+    display: flex;
+    justify-content: end;
 }

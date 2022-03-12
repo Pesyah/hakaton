@@ -6,7 +6,7 @@ import Account from '../molecules/Account';
 
 const Header = () => {
     return (
-        <header id="header">
+        <header className="col-xs-12" id="header">
             <Logo/>
             <NavHeader/>
             <Account text='Войти' src='#'/>
