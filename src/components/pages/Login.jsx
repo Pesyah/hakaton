@@ -21,7 +21,7 @@ const Login = () => {
                     <div className="reg-btn-block">
                         <button className="reg-btn" onClick={() => dispatch(login(email, password))}><Link to="/">Войти</Link></button>
                     </div>
-                    <Link to="/registration">У меня ещё нет аккаунта</Link>
+                    <Link to="/registration" className='reg-login'>У меня ещё нет аккаунта</Link>
                 </div>
             </div>
         </div>

@@ -46,7 +46,6 @@ function App() {
           <Route path="/admin" element={<div>Привет мир</div>}>
           </Route>
         </Routes>
-        <Footer cursesHref='' cursesText='Курсы' aboutProjectHref='/' aboutProjectText='О проекте' newsHref='' newsText='Новости'/>
       </div>
     </Router>
   );  

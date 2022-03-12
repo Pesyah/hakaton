@@ -10,7 +10,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-50%, -50%);
     width: 30%;
     border: 2px solid #E4003A;
     border-radius: 8px;
@@ -36,24 +36,59 @@
     transform: translateX(-50%);
 }
 .reg-content{
-    margin-top: 25px;
+    margin-top: 20px;
 }
 .reg-btn{
     background: transparent;
     font-size: 21px;
     text-transform: uppercase;
     border-radius: 8px;
-    border: 3px solid #E4003A;
     color: #E4003A;
+    border: 3px solid #E4003A;
     font-family: 'Montserrat';
     font-weight: bold;
     padding: 6px 60px;
     transition: 0.5s;
 }
+.reg-btn a{
+    color: #E4003A;
+    text-decoration: none;
+}
 .reg-btn:hover{
     background: #E4003A;
+}
+.reg-btn:hover a{
+    color: white;
+}
+.reg-btn:hover{
     color: white;
 }
 .reg-btn-block{
     text-align: center;
+}
+.reg-inp{
+    border: 2px solid #E4003A;
+    color: white;
+    background: #E4003A;
+    border-radius: 7px;
+    padding: 5px 14px;
+    font-size: 16px;
+    width: 70%;
+    margin: 10px 0px;
+}
+.reg-btn-block{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.reg-inp::-webkit-input-placeholder { color: white; font-family: 'Montserrat'; }
+.reg-login{
+    color: #00A1DF;
+    font-size: 15px;
+    font-family: 'Montserrat';
+}
+.reg-login:hover{
+    color: #00A1DF;
+}
+.reg-btn-block:hover{
+    color: #00A1DF;
 }
