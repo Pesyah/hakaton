@@ -12,10 +12,17 @@ import Header from './components/organisms/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainPage from './components/pages/MainPage';
 import Login from './components/pages/Login';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { auth } from './actions/user';
 
 function App() {
   const isAuth = useSelector(state => state.user.isAuth)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(auth())
+  }, [])
   return (
     <Router>
       <div className="App">

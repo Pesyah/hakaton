@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch , useSelector } from 'react-redux';
 import Input from '../atoms/Input';
 import './Registration.css'
 import { login } from '../../actions/user';
@@ -9,6 +9,7 @@ const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const dispatch = useDispatch()
+    const isAuth = useSelector(state => state.user.isAuth)
 
     return (
         <div className='reg-shadow'>
