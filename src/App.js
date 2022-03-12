@@ -1,7 +1,6 @@
 import './App.css';
 import './Style.css'
 import './bootstrap.min.css'
-import MainPage from './components/Pages/MainPage.jsx';
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,7 +9,7 @@ import {
 import Registration from './components/Registration/Registration';
 import Footer from './components/organisms/Footer';
 import Header from './components/organisms/Header';
-import MainPage from './components/pages/MainPage';
+import MainPage from './components/Pages/MainPage.jsx';
 
 function App() {
   return (
