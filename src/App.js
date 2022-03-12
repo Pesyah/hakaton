@@ -6,7 +6,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Registration from './components/Registration/Registration';
+import Registration from './components/pages/Registration';
 import Footer from './components/organisms/Footer';
 import Header from './components/organisms/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';

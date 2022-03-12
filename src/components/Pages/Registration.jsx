@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-// import Input from "../../utils/input/Input";
+import Input from '../atoms/Input';
 import {registration} from "../../actions/user";
 import './Registration.css'
 
@@ -22,5 +22,4 @@ const Registration = () => {
         </div>
     );
 };
-
 export default Registration;

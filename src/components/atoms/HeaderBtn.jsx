@@ -6,8 +6,8 @@ const HeaderBtn = (props) => {
     return (
         <button className="col-xs-3 header-btn btn-hover1">
             <div>
-                <Link to="/">О проекте</Link>
-                </div>
+                <Link to={props.src}>{props.text}</Link>
+            </div>
         </button>
     );
 };
