@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { auth } from './actions/user';
 import Admin from './components/pages/Admin';
+import NewCouse from './components/pages/NewCouse';
 
 function App() {
   const isAuth = useSelector(state => state.user.isAuth)
@@ -43,6 +44,8 @@ function App() {
           })()}
           
           <Route path="/" element={<MainPage/>}>
+          </Route>
+          <Route path="/NewCouse" element={<NewCouse/>}>
           </Route>
           <Route path="/admin" element={<Admin></Admin>}>
           </Route>
