@@ -62,3 +62,19 @@ export const users = (email) => {
     }
 
 }
+
+export const newLection = (h1, main, test) => {
+    return async dispatch => {
+        try {
+            const response = await axios.post(`http://localhost:5000/api/auth/NewLection`, {
+                h1,
+                main,
+                test
+            })
+            return response.data
+        } catch (e) {
+            alert(e.response.data.message)
+        }
+    }
+
+}

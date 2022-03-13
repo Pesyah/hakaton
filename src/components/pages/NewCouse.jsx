@@ -1,7 +1,11 @@
 import React from 'react';
 import './NewCouse.css'
+import { useDispatch } from 'react-redux';
 
 const NewCouse = () => {
+
+    const dispatch = useDispatch()
+    
     return (
         <section id="new-couse">
             <div className="container">
