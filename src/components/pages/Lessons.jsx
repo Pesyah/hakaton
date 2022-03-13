@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Lessons = () => {
     
     const dispatch = useDispatch()
-    dispatch(user("test@mail.ru"))
+    dispatch(user(localStorage.getItem('myemail')))
     const openTests = JSON.parse(localStorage.getItem('openTests'))
     dispatch(lections(openTests))
     const lecs = JSON.parse(localStorage.getItem('openLec'))

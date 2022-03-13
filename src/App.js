@@ -32,7 +32,7 @@ function App() {
   let lecs = []
   
   if (isAuth) {
-    dispatch(user("test@mail.ru"))
+    dispatch(user(localStorage.getItem('myemail')))
     const openTests = JSON.parse(localStorage.getItem('openTests'))
     dispatch(lections(openTests))
     console.log(JSON.parse(localStorage.getItem('openLec')))

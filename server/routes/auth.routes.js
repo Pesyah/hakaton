@@ -52,6 +52,7 @@ router.post('/login',
             }
             const token = jwt.sign({id: user.id}, config.get("secretKey"), {expiresIn: "1h"})
             return res.json({
+                myemail: user.email,
                 token,
                 user: {
                     id: user.id,
@@ -76,7 +77,6 @@ router.get('/auth', authMiddleware,
             const user = await User.findOne({_id: req.user.id})
             const token = jwt.sign({id: user.id}, config.get("secretKey"), {expiresIn: "1h"})
             return res.json({
-                userLevel: user.userLevel,
                 token,
                 user: {
                     id: user.id,

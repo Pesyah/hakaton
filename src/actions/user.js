@@ -27,6 +27,7 @@ export const login = (email, password) => {
             })
             dispatch(setUser(response.data.user))
             localStorage.setItem('token', response.data.token)
+            localStorage.setItem('myemail', response.data.myemail)
         } catch (e) {
             alert(e.response.data.message)
         }
@@ -41,7 +42,6 @@ export const auth = () => {
                                             {headers:{Authorization:`bearer ${localStorage.getItem('token')}`}})
             dispatch(setUser(response.data.user))
             localStorage.setItem('token', response.data.token)
-            localStorage.setItem('userLevel', response.data.userLevel)
         } catch (e) {
             alert(e.response.data.message)
             localStorage.clear()
