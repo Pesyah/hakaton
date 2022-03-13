@@ -29,10 +29,14 @@ function App() {
     }
   }, [])
 
-  dispatch(user("test@mail.ru"))
-  const openTests = JSON.parse(localStorage.getItem('openTests'))
-  dispatch(lections(openTests))
-  const lecs = JSON.parse(localStorage.getItem('openLec'))
+  const lecs = []
+  
+  if (isAuth) {
+    dispatch(user("test@mail.ru"))
+    const openTests = JSON.parse(localStorage.getItem('openTests'))
+    dispatch(lections(openTests))
+    lecs = JSON.parse(localStorage.getItem('openLec'))
+  }
   
   return (
     <Router>
@@ -49,9 +53,13 @@ function App() {
               </>
             }
           })()}
-          
+
           <Route path="/" element={<MainPage/>}>
           </Route>
+          
+          {( () => {
+            if (isAuth) {
+              return <>
           <Route path="/NewCouse" element={<NewCouse/>}>
           </Route>
           <Route path="/admin" element={<Admin></Admin>}>
@@ -68,6 +76,9 @@ function App() {
                     </Route>
                 )
             })}
+              </>
+            }
+          })()}
         </Routes>
       </div>
     </Router>

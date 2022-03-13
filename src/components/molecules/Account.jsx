@@ -13,7 +13,8 @@ const Account = (props) => {
         <div>
             {(() => {
                 if (isAuth) {
-                    return <Link to="/" onClick={() => {dispatch(logout())}}>Выйти</Link>
+                    return <Link to="/" onClick={() => {localStorage.clear()
+                        dispatch(logout())}}>Выйти</Link>
                 }
                 else {
                     return <Link to="/login">Войти</Link>
