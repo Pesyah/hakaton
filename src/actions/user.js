@@ -11,7 +11,8 @@ export const registration = async (email, password, username, surname, otchestvo
             otchestvo,
             phoneNumber
         })
-        alert(response.data.message)
+        console.log(response)
+        // alert(response.data.message)
     } catch (e) {
         alert(e.response.data.message)
     }
@@ -49,10 +50,10 @@ export const auth = () => {
 
 }
 
-export const users = (email) => {
+export const user = (email) => {
     return async dispatch => {
         try {
-            const response = await axios.post(`http://localhost:5000/api/auth/users`, {
+            const response = await axios.post(`http://localhost:5000/api/auth/user`, {
                 email
             })
             return response.data
@@ -70,6 +71,21 @@ export const newLection = (h1, main, test) => {
                 h1,
                 main,
                 test
+            })
+            return response.data
+        } catch (e) {
+            alert(e.response.data.message)
+        }
+    }
+
+}
+
+export const addLection = (email, lection) => {
+    return async dispatch => {
+        try {
+            const response = await axios.post(`http://localhost:5000/api/auth/addLection`, {
+                email,
+                lection
             })
             return response.data
         } catch (e) {

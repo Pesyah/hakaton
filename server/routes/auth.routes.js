@@ -29,14 +29,13 @@ router.post('/registration',
             return res.status(400).json({message: `User with email ${email} already exist`})
         }
         const hashPassword = await bcrypt.hash(password, 8)
-        const user = new User({email, password: hashPassword, username, surname, patronymic, phoneNumber, userLevel: 1, })
-        await user.save()
+        const user = new User({email, password: hashPassword, username, surname, patronymic, phoneNumber, openTests: [], userLevel: 1, })
         res.json({message: "User was created"})
     } catch (e) {
         console.log(e)
         res.send({message: "Server error"})
     }
-})
+})  
 
 
 router.post('/login',
@@ -61,7 +60,8 @@ router.post('/login',
                     surname: user.surname, 
                     patronymic: user.patronymic, 
                     phoneNumber: user.phoneNumber,
-                    userLevel: user.userLevel
+                    userLevel: user.userLevel,
+                    openTests: []
                 }
             })
         } catch (e) {
@@ -84,7 +84,8 @@ router.get('/auth', authMiddleware,
                     surname: user.surname, 
                     patronymic: user.patronymic, 
                     phoneNumber: user.phoneNumber,
-                    userLevel: user.userLevel
+                    userLevel: user.userLevel,
+                    openTests: []
                 }
             })
         } catch (e) {
@@ -93,7 +94,7 @@ router.get('/auth', authMiddleware,
         }
     })
 
-router.post('/users',
+router.post('/user',
     async (req, res) => {
         try {
             const {email} = req.body
@@ -108,7 +109,8 @@ router.post('/users',
                     surname: user.surname, 
                     patronymic: user.patronymic, 
                     phoneNumber: user.phoneNumber,
-                    userLevel: user.userLevel
+                    userLevel: user.userLevel,
+                    openTests: []
                 }
             })
         } catch (e) {
@@ -151,4 +153,27 @@ router.post('/NewLection',
 //     }
 // })
 
+router.post('/addLection',
+    [
+        check('email', "Uncorrect email").isEmail(),
+    ],
+    async (req, res) => {
+    try {
+        const errors = validationResult(req)
+        if (!errors.isEmpty()) {
+            return res.status(400).json({message: "Uncorrect request", errors})
+        }
+        const {email, lection} = req.body
+        const user = await User.findOne({email})
+        await User.updateOne({email}, {openTests: [...user.openTests, lection]})
+        res.json({message: "Lection was added"})
+    } catch (e) {
+        console.log(e)
+        res.send({message: "Server error"})
+    }
+})  
+
+
 module.exports = router
+
+//await User.updateOne({email}, {openTests: [1, 2, 3]})

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Input from '../atoms/Input';
-import { users, newLection } from '../../actions/user';
+import { addLection } from '../../actions/user';
 import { useDispatch } from 'react-redux';
 
 const Admin = () => {
@@ -13,7 +13,7 @@ const Admin = () => {
             <p>Добавить пользователю урок</p>
             <input value={email} onChange={(event)=> setEmail(event.target.value)} id='linkText' type="text" className="new-couse-content-inp" placeholder='Почта пользователя' />
             <input value={lec} onChange={(event)=> setLec(event.target.value)} id='linkText' type="text" className="new-couse-content-inp" placeholder='Название лекции' />
-            {/* <button onClick={() => dispatch(newLection(h1, `<p>МНОГО КАКОГО-ТО ТЕКСТА</p>`, 'http://localhost:3000/'))}>ok</button> */}
+            <button onClick={() => dispatch(addLection(email, lec))}>ok</button>
         </div>
     );
 };
