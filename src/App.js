@@ -17,6 +17,7 @@ import { useEffect } from 'react';
 import { auth } from './actions/user';
 import Admin from './components/pages/Admin';
 import NewCouse from './components/pages/NewCouse';
+import Lection from './components/pages/lections/Lection';
 
 function App() {
   const isAuth = useSelector(state => state.user.isAuth)
@@ -43,7 +44,7 @@ function App() {
             }
           })()}
           
-          <Route path="/" element={<MainPage/>}>
+          <Route path="/" element={<Lection/>}>
           </Route>
           <Route path="/NewCouse" element={<NewCouse/>}>
           </Route>

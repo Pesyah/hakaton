@@ -1,0 +1,25 @@
+#lection{
+    margin-top: 79.59px;
+}
+.lection-zag{
+    font-family: 'Montserrat';
+    font-size: 30px;
+    text-align: center;
+    padding: 25px 0px;
+    font-weight: bold;
+    margin: 0px;
+}
+.lection-text{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+.lection-a{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #00A1DF;
+}
+.lection-a:hover{
+    color: #00A1DF;
+}
