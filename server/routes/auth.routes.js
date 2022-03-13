@@ -146,6 +146,7 @@ router.post('/lections',
         const {openTests} = req.body
         let openLec = []
         let lec = {}
+        if (!openTests) return
         for (let i of openTests) {
             lec = await Lection.findOne({name: i})
             openLec = [...openLec, lec]

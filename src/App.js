@@ -29,13 +29,20 @@ function App() {
     }
   }, [])
 
-  const lecs = []
+  let lecs = []
   
   if (isAuth) {
     dispatch(user("test@mail.ru"))
     const openTests = JSON.parse(localStorage.getItem('openTests'))
     dispatch(lections(openTests))
-    lecs = JSON.parse(localStorage.getItem('openLec'))
+    console.log(JSON.parse(localStorage.getItem('openLec')))
+    if (JSON.parse(localStorage.getItem('openLec')) == null) {
+      lecs = []
+    }
+    else {
+      lecs = JSON.parse(localStorage.getItem('openLec'))
+    }
+    
   }
   
   return (
