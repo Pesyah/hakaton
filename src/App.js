@@ -7,7 +7,6 @@ import {
   Route,
 } from "react-router-dom";
 import Registration from './components/pages/Registration';
-import Footer from './components/organisms/Footer';
 import Header from './components/organisms/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainPage from './components/pages/MainPage';
@@ -18,6 +17,8 @@ import { auth } from './actions/user';
 import Admin from './components/pages/Admin';
 import NewCouse from './components/pages/NewCouse';
 import Lessons from './components/pages/Lessons';
+import { user, lections} from './actions/user';
+import Lection from './components/pages/lections/Lection';
 
 function App() {
   const isAuth = useSelector(state => state.user.isAuth)
@@ -27,6 +28,11 @@ function App() {
       dispatch(auth())
     }
   }, [])
+
+  dispatch(user("test@mail.ru"))
+  const openTests = JSON.parse(localStorage.getItem('openTests'))
+  dispatch(lections(openTests))
+  const lecs = JSON.parse(localStorage.getItem('openLec'))
   
   return (
     <Router>
@@ -52,6 +58,16 @@ function App() {
           </Route>
           <Route path="/lections" element={<Lessons/>}>
           </Route>
+          { lecs.map((lec) => {
+                return(
+                  <Route path={`/lec_${lec._id}`} element={<Lection 
+                    name={lec.name}
+                    main={lec.lection}
+                    test={lec.test}
+                    ></Lection>}>
+                    </Route>
+                )
+            })}
         </Routes>
       </div>
     </Router>

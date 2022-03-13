@@ -8,7 +8,7 @@ const User = new Schema({
     surname: {type: String},
     patronymic: {type: String},
     phoneNumber: {type: String},
-    openTests: {type: Array},
+    openTests: {type: Array, default: []},
     userLevel: {type: Number, required: true},
 })
 
