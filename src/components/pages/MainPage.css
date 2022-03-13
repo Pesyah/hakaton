@@ -88,6 +88,7 @@
 }
 .curses-content{
     padding: 0px;
+    padding-bottom: 30px;
 }
 .curses-text-content{
     margin: 0px;

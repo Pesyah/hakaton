@@ -159,3 +159,6 @@ input::-webkit-input-placeholder { color: #FAB526; }
 .footer-links-right-col{
     padding-left: 15px;
 }
+.feedback-form-inp{
+    color: #FAB526;
+}
