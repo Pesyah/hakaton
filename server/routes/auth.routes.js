@@ -5,7 +5,8 @@ const config = require("config")
 const jwt = require("jsonwebtoken")
 const {check, validationResult} = require("express-validator")
 const router = new Router()
-const authMiddleware = require('../middleware/auth.middleware')
+const authMiddleware = require('../middleware/auth.middleware');
+const Lection = require("../models/Lection");
 
 router.post('/registration',
     [
@@ -115,6 +116,24 @@ router.post('/users',
             res.send({message: "Server error"})
         }
     })
+
+router.post('/NewLection',
+    
+    async (req, res) => {
+    try {
+        const {h1, main, test} = req.body
+        const candidate = await Lection.findOne({h1})
+        if(candidate) {
+            return res.status(400).json({message: `Lection with name ${h1} already exist`})
+        }
+        const lec = new Lection({name: h1, lection: main, test: test})
+        await lec.save()
+        res.json({message: "Lection was created"})
+    } catch (e) {
+        console.log(e)
+        res.send({message: "Server error"})
+    }
+})
 
 
 module.exports = router
