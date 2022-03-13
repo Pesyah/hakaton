@@ -3,6 +3,7 @@ import './NewCouse.css'
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { newLection } from '../../actions/user';
+import { Link } from 'react-router-dom';
 
 const NewCouse = () => {
 
@@ -22,7 +23,7 @@ const NewCouse = () => {
                         <textarea value={main} onChange={(event)=> setMain(event.target.value)} id='lessonText' className="new-couse-content-inp new-couse-content-textarea" col='1000' placeholder='Текст урока'></textarea>
                         <input value={test} onChange={(event)=> setTest(event.target.value)} id='linkText' type="text" className="new-couse-content-inp" placeholder='Ссылка на Google-форму' autofocus='True'/>
                         <div onClick={() => {dispatch(newLection(h2, main, test))}} className="new-couse-content-btn-bl">
-                            <span className="new-couse-content-btn">Создать</span>
+                            <span className="new-couse-content-btn"><Link to="/admin">Создать</Link></span>
                         </div>
                     </form>
                 </div>
