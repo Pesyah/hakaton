@@ -11,8 +11,7 @@ export const registration = async (email, password, username, surname, otchestvo
             otchestvo,
             phoneNumber
         })
-        console.log(response)
-        // alert(response.data.message)
+        alert(response.data.message)
     } catch (e) {
         alert(e.response.data.message)
     }
@@ -42,6 +41,7 @@ export const auth = () => {
                                             {headers:{Authorization:`bearer ${localStorage.getItem('token')}`}})
             dispatch(setUser(response.data.user))
             localStorage.setItem('token', response.data.token)
+            localStorage.setItem('userLevel', response.data.userLevel)
         } catch (e) {
             alert(e.response.data.message)
             localStorage.clear()
@@ -56,6 +56,7 @@ export const user = (email) => {
             const response = await axios.post(`http://localhost:5000/api/auth/user`, {
                 email
             })
+            localStorage.setItem('openTests', JSON.stringify(response.data.openTests))
             return response.data
         } catch (e) {
             alert(e.response.data.message)
@@ -64,11 +65,11 @@ export const user = (email) => {
 
 }
 
-export const newLection = (h1, main, test) => {
+export const newLection = (h2, main, test) => {
     return async dispatch => {
         try {
             const response = await axios.post(`http://localhost:5000/api/auth/NewLection`, {
-                h1,
+                h2,
                 main,
                 test
             })
@@ -87,6 +88,21 @@ export const addLection = (email, lection) => {
                 email,
                 lection
             })
+            return response.data
+        } catch (e) {
+            alert(e.response.data.message)
+        }
+    }
+
+}
+
+export const lections = (openTests) => {
+    return async dispatch => {
+        try {
+            const response = await axios.post(`http://localhost:5000/api/auth/lections`, {
+                openTests
+            })
+            localStorage.setItem('openLec', JSON.stringify(response.data.openLec))
             return response.data
         } catch (e) {
             alert(e.response.data.message)

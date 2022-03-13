@@ -61,7 +61,7 @@ router.post('/login',
                     patronymic: user.patronymic, 
                     phoneNumber: user.phoneNumber,
                     userLevel: user.userLevel,
-                    openTests: []
+                    openTests: user.openTests
                 }
             })
         } catch (e) {
@@ -76,6 +76,7 @@ router.get('/auth', authMiddleware,
             const user = await User.findOne({_id: req.user.id})
             const token = jwt.sign({id: user.id}, config.get("secretKey"), {expiresIn: "1h"})
             return res.json({
+                userLevel: user.userLevel,
                 token,
                 user: {
                     id: user.id,
@@ -85,7 +86,7 @@ router.get('/auth', authMiddleware,
                     patronymic: user.patronymic, 
                     phoneNumber: user.phoneNumber,
                     userLevel: user.userLevel,
-                    openTests: []
+                    openTests: user.openTests
                 }
             })
         } catch (e) {
@@ -101,6 +102,7 @@ router.post('/user',
             const user = await User.findOne({email})
             const token = jwt.sign({id: user.id}, config.get("secretKey"), {expiresIn: "1h"})
             return res.json({
+                openTests: user.openTests,
                 token,
                 user: {
                     id: user.id,
@@ -110,7 +112,7 @@ router.post('/user',
                     patronymic: user.patronymic, 
                     phoneNumber: user.phoneNumber,
                     userLevel: user.userLevel,
-                    openTests: []
+                    openTests: user.openTests
                 }
             })
         } catch (e) {
@@ -137,21 +139,23 @@ router.post('/NewLection',
     }
 })
 
-// router.post('/Lection',
+router.post('/lections',
     
-//     async (req, res) => {
-//     try {
-//         const {h1} = req.body
-//         const lection = await Lection.findOne({h1})
-//         if(!lection) {
-//             return res.status(400).json({message: `Lection with name ${h1} have not in database`})
-//         }
-//         res.json({lection})
-//     } catch (e) {
-//         console.log(e)
-//         res.send({message: "Server error"})
-//     }
-// })
+    async (req, res) => {
+    try {
+        const {openTests} = req.body
+        let openLec = []
+        let lec = {}
+        for (let i of openTests) {
+            lec = await Lection.findOne({name: i})
+            openLec = [...openLec, lec]
+         }
+        res.json({openLec})
+    } catch (e) {
+        console.log(e)
+        res.send({message: "Server error"})
+    }
+})
 
 router.post('/addLection',
     [
