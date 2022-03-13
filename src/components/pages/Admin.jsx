@@ -16,7 +16,9 @@ const Admin = () => {
                     <h2 className='admin-panel-zag'>Добавить пользователю урок</h2>
                     <input value={email} onChange={(event)=> setEmail(event.target.value)} id='linkText' type="text" className="new-couse-content-inp" placeholder='Почта пользователя' />
                     <input value={lec} onChange={(event)=> setLec(event.target.value)} id='linkText' type="text" className="new-couse-content-inp" placeholder='Название лекции' />
-                    <button onClick={() => dispatch(addLection(email, lec))}>ok</button>
+                    <div className="new-couse-content-btn-bl">
+                        <button className='new-couse-content-btn' onClick={() => dispatch(addLection(email, lec))}>Добавить</button>
+                    </div>
                 </div>
             </div>
         </section>

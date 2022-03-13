@@ -39,9 +39,16 @@
     padding: 10px 80px;
     font-size: 25px;
     transition: 0.5s;
+    cursor: pointer;
+}
+.new-couse-content-btn{
+    color: #e4003a;
+    text-decoration: none;
+    transition: 0.5s;
 }
 .new-couse-content-btn:hover{
     color: white;
+    text-decoration: none;
     background: #e4003a;
 }
 .new-couse-content-btn-bl{
