@@ -5,8 +5,9 @@ import './Lessons.css'
 import { user } from '../../actions/user';
 
 const Lessons = () => {
+    
     const dispatch = useDispatch()
-    const myuser = dispatch(user())
+    const myuser = dispatch(user("test@mail.ru"))
     console.log(myuser)
     return (
         <section id="lessons-block">
