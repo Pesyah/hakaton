@@ -135,5 +135,20 @@ router.post('/NewLection',
     }
 })
 
+// router.post('/Lection',
+    
+//     async (req, res) => {
+//     try {
+//         const {h1} = req.body
+//         const lection = await Lection.findOne({h1})
+//         if(!lection) {
+//             return res.status(400).json({message: `Lection with name ${h1} have not in database`})
+//         }
+//         res.json({lection})
+//     } catch (e) {
+//         console.log(e)
+//         res.send({message: "Server error"})
+//     }
+// })
 
 module.exports = router

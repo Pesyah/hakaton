@@ -1,6 +1,6 @@
-const {model, Shema} = require("mongoose")
+const {model, Schema} = require("mongoose")
 
-const Lection = new Shema ({
+const Lection = new Schema ({
     name: {type: String, required: true},
     lection: {type: String},
     test: {type: String}

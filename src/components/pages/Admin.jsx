@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import Input from '../atoms/Input';
-import { users } from '../../actions/user';
+import { users, newLection } from '../../actions/user';
 import { useDispatch } from 'react-redux';
 
 const Admin = () => {
-    const [email, setInput] = useState("")
+    const [email, setEmail] = useState("")
     const dispatch = useDispatch()
 
     return (
         <div className='beleberda'>
-            <p>Поиск пользователей</p>
-            <Input value={email} setValue={setInput} type="text" placeholder="Введите почту нужного пользователя..."/>
-            <button onClick={() => dispatch(users(email))}>ok</button>
+            <p>Добавить пользователю урок</p>
+            <Input value={email} setValue={setEmail} type="text" placeholder="Введите почту пользователя..."/>
+            {/* <Input value={1} setValue={seth1} type="text" placeholder="Введите название урока..."/> */}
+            {/* <button onClick={() => dispatch(newLection(h1, `<p>МНОГО КАКОГО-ТО ТЕКСТА</p>`, 'http://localhost:3000/'))}>ok</button> */}
         </div>
     );
 };
