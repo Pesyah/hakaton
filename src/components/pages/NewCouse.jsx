@@ -22,8 +22,7 @@ const NewCouse = () => {
                         <textarea value={main} onChange={(event)=> setMain(event.target.value)} id='lessonText' className="new-couse-content-inp new-couse-content-textarea" col='1000' placeholder='Текст урока'></textarea>
                         <input value={test} onChange={(event)=> setTest(event.target.value)} id='linkText' type="text" className="new-couse-content-inp" placeholder='Ссылка на Google-форму' autofocus='True'/>
                         <div onClick={() => {dispatch(newLection(h2, main, test))}} className="new-couse-content-btn-bl">
-                            {/* <input type="submit" value='Создать' className="new-couse-content-btn"/> */}
-                            создать
+                            <span className="new-couse-content-btn">Создать</span>
                         </div>
                     </form>
                 </div>
