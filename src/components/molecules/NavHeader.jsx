@@ -7,8 +7,8 @@ const NavHeader = () => {
             <button className="col-xs-2 header-btn btn-hover1"><a src="#">Курсы</a></button>
             <div className="col-xs-10 nav-other">
                 <HeaderBtn text='О проекте' src='/'/>
-                <HeaderBtn text='Новости' src='#'/>
-                <HeaderBtn text='Уроки' src='#'/>
+                <HeaderBtn text='Новости' src=''/>
+                <HeaderBtn text='Уроки' src='/lections'/>
             </div>
         </nav>
     );

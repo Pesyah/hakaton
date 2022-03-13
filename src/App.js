@@ -50,6 +50,8 @@ function App() {
           </Route>
           <Route path="/admin" element={<Admin></Admin>}>
           </Route>
+          <Route path="/lections" element={<div>asdasdddaadadssdd</div>}>
+          </Route>
         </Routes>
       </div>
     </Router>

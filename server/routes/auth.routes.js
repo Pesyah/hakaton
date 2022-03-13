@@ -121,12 +121,12 @@ router.post('/NewLection',
     
     async (req, res) => {
     try {
-        const {h1, main, test} = req.body
-        const candidate = await Lection.findOne({h1})
+        const {h2, main, test} = req.body
+        const candidate = await Lection.findOne({h2})
         if(candidate) {
-            return res.status(400).json({message: `Lection with name ${h1} already exist`})
+            return res.status(400).json({message: `Lection with name ${h2} already exist`})
         }
-        const lec = new Lection({name: h1, lection: main, test: test})
+        const lec = new Lection({name: h2, lection: main, test: test})
         await lec.save()
         res.json({message: "Lection was created"})
     } catch (e) {
