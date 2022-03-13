@@ -15,6 +15,7 @@ import Login from './components/pages/Login';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { auth } from './actions/user';
+import Admin from './components/pages/Admin';
 
 function App() {
   const isAuth = useSelector(state => state.user.isAuth)
@@ -43,7 +44,7 @@ function App() {
           
           <Route path="/" element={<MainPage/>}>
           </Route>
-          <Route path="/admin" element={<div>Привет мир</div>}>
+          <Route path="/admin" element={<Admin></Admin>}>
           </Route>
         </Routes>
       </div>

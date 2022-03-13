@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 const Registration = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [name, setName] = useState("")
+    const [username, setUsername] = useState("")
     const [surname, setsurname] = useState("")
-    const [otchestvo, setotchestvo] = useState("")
+    const [patronymic, setpatronymic] = useState("")
     const [phoneNumber, setphoneNumber] = useState("")
 
     return (
@@ -22,15 +22,15 @@ const Registration = () => {
                         <br />
                         <Input value={password} setValue={setPassword} type="password" placeholder="Введите пароль..."/>
                         <br />
-                        <Input value={name} setValue={setName} type="text" placeholder="Введите Имя..."/>
+                        <Input value={username} setValue={setUsername} type="text" placeholder="Введите Имя..."/>
                         <br />
                         <Input value={surname} setValue={setsurname} type="text" placeholder="Введите Фамилию..."/>
                         <br />
-                        <Input value={otchestvo} setValue={setotchestvo} type="text" placeholder="Введите Отчество..."/>
+                        <Input value={patronymic} setValue={setpatronymic} type="text" placeholder="Введите Отчество..."/>
                         <br />
                         <Input value={phoneNumber} setValue={setphoneNumber} type="text" placeholder="Введите телефон..."/>
                         <div className="reg-btn-block">
-                            <button className="reg-btn" onClick={() => registration(email, password, name, surname, otchestvo, phoneNumber)}>Зарегистрироваться</button>
+                            <button className="reg-btn" onClick={() => registration(email, password, username, surname, patronymic, phoneNumber)}>Зарегистрироваться</button>
                         </div>
                         <Link to="/login" className='reg-login'>У меня уже есть аккаунт</Link>
                     </div>

@@ -92,3 +92,9 @@
 .reg-btn-block:hover{
     color: #00A1DF;
 }
+
+.beleberda {
+    display: flex;
+    justify-content: center;
+    margin-top: 50vh;
+}

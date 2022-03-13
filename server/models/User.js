@@ -3,11 +3,11 @@ const {Schema, model, ObjectId} = require("mongoose")
 
 const User = new Schema({
     email: {type: String, required: true, unique: true},
-    password: {type: String, required: true},
-    // name: {type: String, required: true},
-    // surname: {type: String, required: true},
-    // patronymic: {type: String, required: true},
-    // phoneNumber: {type: String, required: true}
+    password: {type: String},
+    username: {type: String},
+    surname: {type: String},
+    patronymic: {type: String},
+    phoneNumber: {type: String},
     openTests: {type: Array},
     userLevel: {type: Number, required: true},
 })
