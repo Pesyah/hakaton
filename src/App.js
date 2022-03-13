@@ -17,6 +17,7 @@ import { useEffect } from 'react';
 import { auth } from './actions/user';
 import Admin from './components/pages/Admin';
 import NewCouse from './components/pages/NewCouse';
+import Lessons from './components/pages/Lessons';
 
 function App() {
   const isAuth = useSelector(state => state.user.isAuth)
@@ -49,7 +50,7 @@ function App() {
           </Route>
           <Route path="/admin" element={<Admin></Admin>}>
           </Route>
-          <Route path="/lections" element={<div>asdasdddaadadssdd</div>}>
+          <Route path="/lections" element={<Lessons/>}>
           </Route>
         </Routes>
       </div>

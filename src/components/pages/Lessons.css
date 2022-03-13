@@ -1,0 +1,44 @@
+#lessons-block{
+    margin-top: 79.59px;
+    padding-top: 50px;
+}
+.lesson-bl{
+    padding: 25px 30px;
+    border: 1px solid #CFD2D3;
+    cursor: pointer;
+}
+.lesson-zag{
+    margin-bottom: 15px;
+    font-family: 'Montserrat';
+    margin: 0px;
+    margin-bottom: 7px;
+    display: inline-block;
+}
+.progress{
+    width: 300px;
+    height: 15px;
+    border: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    margin: 0px;
+}
+.lesson-p{
+    font-size: 16px;
+    font-family: 'Montserrat';
+    margin: 0px;
+    display: inline-block;
+}
+.lesson-text-bl{
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
+.progress-bl{
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+.progress-text{
+    font-family: 'Montserrat';
+    margin-bottom: 15px;
+}
